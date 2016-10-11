@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "hot": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "sale": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "list1": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "list2": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "list3": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "last": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  }
+}

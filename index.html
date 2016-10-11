@@ -6,65 +6,72 @@
 <title>祥源久业</title>
 	<link rel="stylesheet" href="css/font/iconfont.css">
 	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/index.css">
 <script type="text/javascript" src="js/iscroll.js"></script>
-    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="js/touch.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.12.4.js"></script>-->
+<!--<script type="text/javascript" src="js/touch.js"></script>-->
+<script type="text/javascript" src="js/zepto.js" ></script>
+	<script type="text/javascript">
+		var myScroll;
+		function loaded () {
+			/*touch.on('#footerUp','touchstart',function(e){
+				e.preventDefault();  //禁止默认时间，浏览器缩放，滚动条滚动
+			});*/
+			myScroll = new IScroll('#wrapper', {
+				scrollbars: true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var $footerUp = $("#footerUp");
 
-<script type="text/javascript">
-var myScroll;
-function loaded () {
-    touch.on('#footerUp','touchstart',function(e){
-        e.preventDefault();  //禁止默认时间，浏览器缩放，滚动条滚动
-    });
-    myScroll = new IScroll('#wrapper', {
-		scrollbars: true,
-		mouseWheel: true,
-		interactiveScrollbars: true,
-		shrinkScrollbars: 'scale',
-		fadeScrollbars: true
-	});
-    var $footerUp = $("#footerUp");
-	touch.on($footerUp,'tap',function (e){
-		var $target = $(e.target).index();
-		/*var $footerDiv = $("#footer>div:eq("+$target+")");
-		 $("#footer>div").removeClass();
-		 $footerDiv.addClass("divColor");*/
-		if($target === 0){
-			/*$header.css("background","rgba(0,143,58,0)");*/
-			window.location = "index.html";
-			/*$header.html(
-			 "<div class='headerBox0'>" +
-			 "请输入要搜索的商品名称" +
-			 "<i class='iconfont headerIconfont'>&#xe60b;</i>" +
-			 "</div>"
-			 );*/
-		}else if($target === 1){
-			window.location = "html/list.html";
-			/*$header.css("background","rgba(0,143,58,.8)");*/
-			/*$header.html(
-			 "<div class='headerBox0'>" +
-			 "请输入要搜索的商品名称" +
-			 "<i class='iconfont headerIconfont'>&#xe60b;</i>" +
-			 "</div>"
-			 );*/
-		}else if($target === 2){
-			/*$header.css("background","rgba(0,143,58,.8)");*/
-			window.location = "html/my.html";
-			/*$header.html(
-			 "<div class='headerBox2'>" +
-			 $footerDiv.attr("footerText") +
-			 "</div>"
-			 );*/
-		}else if($target === 3){
-			/*$header.css("background","rgba(0,143,58,.8)");*/
-			window.location = "html/shopCar.html";
-		}else if($target === 4){
-			/*$header.css("background","rgba(0,143,58,.8)");*/
-			window.location = "html/aboutUs.html";
+			$footerUp.tap(function(e){
+				/*$(this).parent('li').remove()
+				 });
+
+				 touch.on($footerUp,'tap',function (e){*/
+				var $target = $(e.target).index();
+				/*var $footerDiv = $("#footer>div:eq("+$target+")");
+				 $("#footer>div").removeClass();
+				 $footerDiv.addClass("divColor");*/
+				if($target === 0){
+					/*$header.css("background","rgba(0,143,58,0)");*/
+					window.location = "index.html";
+					/*$header.html(
+					 "<div class='headerBox0'>" +
+					 "请输入要搜索的商品名称" +
+					 "<i class='iconfont headerIconfont'>&#xe60b;</i>" +
+					 "</div>"
+					 );*/
+				}else if($target === 1){
+					window.location = "html/list.html";
+					/*$header.css("background","rgba(0,143,58,.8)");*/
+					/*$header.html(
+					 "<div class='headerBox0'>" +
+					 "请输入要搜索的商品名称" +
+					 "<i class='iconfont headerIconfont'>&#xe60b;</i>" +
+					 "</div>"
+					 );*/
+				}else if($target === 2){
+					/*$header.css("background","rgba(0,143,58,.8)");*/
+					window.location = "html/my.html";
+					/*$header.html(
+					 "<div class='headerBox2'>" +
+					 $footerDiv.attr("footerText") +
+					 "</div>"
+					 );*/
+				}else if($target === 3){
+					/*$header.css("background","rgba(0,143,58,.8)");*/
+					window.location = "html/shopCar.html";
+				}else if($target === 4){
+					/*$header.css("background","rgba(0,143,58,.8)");*/
+					window.location = "html/aboutUs.html";
+				}
+			});
 		}
-	});
-}
-</script>
+	</script>
 </head>
 <body onload="loaded()">
 <div id="header">
@@ -76,56 +83,289 @@ function loaded () {
 <div id="wrapper">
 	<div id="scroller">
 		<ul>
-			<li>Pretty row 1</li>
-			<li>Pretty row 2</li>
-			<li>Pretty row 3</li>
-			<li>Pretty row 4</li>
-			<li>Pretty row 5</li>
-			<li>Pretty row 6</li>
-			<li>Pretty row 7</li>
-			<li>Pretty row 8</li>
-			<li>Pretty row 9</li>
-			<li>Pretty row 10</li>
-			<li>Pretty row 11</li>
-			<li>Pretty row 12</li>
-			<li>Pretty row 13</li>
-			<li>Pretty row 14</li>
-			<li>Pretty row 15</li>
-			<li>Pretty row 16</li>
-			<li>Pretty row 17</li>
-			<li>Pretty row 18</li>
-			<li>Pretty row 19</li>
-			<li>Pretty row 20</li>
-			<li>Pretty row 21</li>
-			<li>Pretty row 22</li>
-			<li>Pretty row 23</li>
-			<li>Pretty row 24</li>
-			<li>Pretty row 25</li>
-			<li>Pretty row 26</li>
-			<li>Pretty row 27</li>
-			<li>Pretty row 28</li>
-			<li>Pretty row 29</li>
-			<li>Pretty row 30</li>
-			<li>Pretty row 31</li>
-			<li>Pretty row 32</li>
-			<li>Pretty row 33</li>
-			<li>Pretty row 34</li>
-			<li>Pretty row 35</li>
-			<li>Pretty row 36</li>
-			<li>Pretty row 37</li>
-			<li>Pretty row 38</li>
-			<li>Pretty row 39</li>
-			<li>Pretty row 40</li>
-			<li>Pretty row 41</li>
-			<li>Pretty row 42</li>
-			<li>Pretty row 43</li>
-			<li>Pretty row 44</li>
-			<li>Pretty row 45</li>
-			<li>Pretty row 46</li>
-			<li>Pretty row 47</li>
-			<li>Pretty row 48</li>
-			<li>Pretty row 49</li>
-			<li>Pretty row 50</li>
+			<li class="wrapper_nav">
+				<div class="swiper-container nav-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="lazy" src="img/103/101/1468802414157680163.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/103/101/1471510940306945432.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/103/101/aboutus1.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/103/101/1472031640869875259.jpg">
+						</div>
+					</div>
+					<div class="swiper-pagination" style="background: rgba(0,0,0,0); height: 10px"></div>
+				</div>
+			</li>
+			<li class="wrapper_hot">
+				<div class="wrapper_hot_box">
+					<div class="wrapper_hot_box_container" style="background: rgb(254,67,101)"></div>
+					<div class="wrapper_hot_box_container" style="background: rgb(252,157,154)"></div>
+					<div class="wrapper_hot_box_container"  style="background: rgb(200,200,169)"></div>
+					<div class="wrapper_hot_box_container"  style="background: rgb(131,175,155)"></div>
+				</div>
+			</li>
+			<li class="wrapper_sale">
+				<div class="swiper-container sale-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_8le3qufk4220151105152250.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_62txu2bn9620160921165342.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_76kd7z9s9c20160628141437.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_j6x2nu4ict20160922163140.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_rcr674vbky20160923142708.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_wmr9pzcbpf20151105152411.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_wq2zmg9v7k20151105153225.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="lazy" src="img/102/100/150_x3pi6ibtxt20160923142631.jpg">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="wrapper_list1">
+				<div class="wrapper_list1_1">
+					<div style="background: rgb(174,221,129)">
+						<img class="lazy" src="img/imgHtml/201609232046093.png@90Q.png">
+					</div>
+				</div>
+				<div class="wrapper_list1_2">
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092417285271.jpg@90Q.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092417285271.jpg@90Q.jpg">
+					</div>
+				</div>
+				<div class="wrapper_list1_3">
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092415283782.png@90Q.png">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092415283782.png@90Q.png">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092415283782.png@90Q.png">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092415283782.png@90Q.png">
+					</div>
+				</div>
+				<div class="wrapper_list1_4">
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092417285271.jpg@90Q.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092419164682.jpg@90Q.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092419164682.jpg@90Q.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092419164682.jpg@90Q.jpg">
+					</div>
+				</div>
+			</li>
+			<li class="wrapper_list2">
+				<div class="wrapper_list2_1">
+					<div>
+						<img class="lazy" src="img/imgHtml/201609232046093.png@90Q.png">
+					</div>
+				</div>
+				<div class="wrapper_list2_2">
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092417285271.jpg@90Q.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/2016092417285271.jpg@90Q.jpg">
+					</div>
+				</div>
+				<div class="wrapper_list2_3">
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+				</div>
+			</li>
+			<li  class="wrapper_list3">
+				<div class="wrapper_list3_1">
+					<div>
+						<i class="iconfont">&#xe61f;</i>标题
+					</div>
+					<div>
+						更多<i class="iconfont">&#xe614;</i>
+					</div>
+				</div>
+				<div class="wrapper_list3_2">
+					<div class="swiper-container wrapper_list3_2-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1468802414157680163.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1471510940306945432.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/aboutus1.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1472031640869875259.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper_list3_3">
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+				</div>
+			</li>
+			<li  class="wrapper_list3">
+				<div class="wrapper_list3_1">
+					<div>
+						<i class="iconfont">&#xe61f;</i>标题
+					</div>
+					<div>
+						更多<i class="iconfont">&#xe614;</i>
+					</div>
+				</div>
+				<div class="wrapper_list3_2">
+					<div class="swiper-container wrapper_list3_2-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1468802414157680163.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1471510940306945432.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/aboutus1.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1472031640869875259.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper_list3_3">
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+				</div>
+			</li>
+			<li  class="wrapper_list3">
+				<div class="wrapper_list3_1">
+					<div>
+						<i class="iconfont">&#xe61f;</i>标题
+					</div>
+					<div>
+						更多<i class="iconfont">&#xe614;</i>
+					</div>
+				</div>
+				<div class="wrapper_list3_2">
+					<div class="swiper-container wrapper_list3_2-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1468802414157680163.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1471510940306945432.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/aboutus1.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="lazy" src="img/103/101/1472031640869875259.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper_list3_3">
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/103/101/1454061112772047939.jpg">
+					</div>
+				</div>
+			</li>
+			<li  class="wrapper_list_last">
+				<div class="wrapper_last_1">
+					标题
+				</div>
+				<div class="wrapper_last_2">
+					<div>
+						<img class="lazy" src="img/imgHtml/20160416104145_631033.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/20160416104145_631033.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/20160416104145_631033.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/20160416104145_631033.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/20160416104145_631033.jpg">
+					</div>
+					<div>
+						<img class="lazy" src="img/imgHtml/20160416104145_631033.jpg">
+					</div>
+				</div>
+				<div class="wrapper_last_3">
+					点击查看全部商品<i class="iconfont">&#xe614;</i>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -158,5 +398,93 @@ function loaded () {
     <div></div>
     <div></div>
 </div>
+<script src="js/swiper.jquery.min.js"></script>
+<!--<script src="js/jquery.lazyload.js"></script>-->
+<script>
+	/*$('img').lazyload({
+		effect:'fadeIn'
+	});*//*图片懒加载*/
+	var mySwiper = new Swiper ('.nav-swiper', {
+		autoplay: 5000,
+		/*autoplayDisableOnInteraction : false,*/
+		/*effect : 'fade',*/
+		/*loop : true,*/
+		pagination: '.swiper-pagination'
+	});
+	var mySaleSwiper = new Swiper ('.sale-swiper', {
+		autoplay: 7000,
+		autoplayDisableOnInteraction : false,
+		slidesPerView : 3,
+		slidesPerGroup : 3
+	});
+	var myListSwiper = new Swiper ('.wrapper_list3_2-swiper', {
+		autoplay: 5000,
+		/*autoplayDisableOnInteraction : false,*/
+		/*effect : 'fade',*/
+		/*loop : true*/
+	})
+</script>
+<script src="js/index.js"></script>
+<!--<script type="text/javascript">
+	var myScroll;
+	function loaded () {
+		touch.on('#footerUp','touchstart',function(e){
+			e.preventDefault();  //禁止默认时间，浏览器缩放，滚动条滚动
+		});
+		myScroll = new IScroll('#wrapper', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true
+		});
+		var $footerUp = $("#footerUp");
+
+		$footerUp.tap(function(e){
+			/*$(this).parent('li').remove()
+			 });
+
+			 touch.on($footerUp,'tap',function (e){*/
+			alert("ok");
+			var $target = $(e.target).index();
+			/*var $footerDiv = $("#footer>div:eq("+$target+")");
+			 $("#footer>div").removeClass();
+			 $footerDiv.addClass("divColor");*/
+			if($target === 0){
+				/*$header.css("background","rgba(0,143,58,0)");*/
+				window.location = "index.html";
+				/*$header.html(
+				 "<div class='headerBox0'>" +
+				 "请输入要搜索的商品名称" +
+				 "<i class='iconfont headerIconfont'>&#xe60b;</i>" +
+				 "</div>"
+				 );*/
+			}else if($target === 1){
+				window.location = "html/list.html";
+				/*$header.css("background","rgba(0,143,58,.8)");*/
+				/*$header.html(
+				 "<div class='headerBox0'>" +
+				 "请输入要搜索的商品名称" +
+				 "<i class='iconfont headerIconfont'>&#xe60b;</i>" +
+				 "</div>"
+				 );*/
+			}else if($target === 2){
+				/*$header.css("background","rgba(0,143,58,.8)");*/
+				window.location = "html/my.html";
+				/*$header.html(
+				 "<div class='headerBox2'>" +
+				 $footerDiv.attr("footerText") +
+				 "</div>"
+				 );*/
+			}else if($target === 3){
+				/*$header.css("background","rgba(0,143,58,.8)");*/
+				window.location = "html/shopCar.html";
+			}else if($target === 4){
+				/*$header.css("background","rgba(0,143,58,.8)");*/
+				window.location = "html/aboutUs.html";
+			}
+		});
+	}
+</script>-->
 </body>
 </html>

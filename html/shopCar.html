@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="../css/font/iconfont.css">
     <link rel="stylesheet" href="../css/common.css">
     <script type="text/javascript" src="../js/iscroll.js"></script>
-    <script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../js/touch.js"></script>
-
+    <!--<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>-->
+    <!--<script type="text/javascript" src="../js/touch.js"></script>-->
+    <script type="text/javascript" src="../js/zepto.js" ></script>
     <script type="text/javascript">
         var myScroll;
         function loaded () {
-            touch.on('#footerUp','touchstart',function(e){
+            /*touch.on('#footerUp','touchstart',function(e){
                 e.preventDefault();  //禁止默认时间，浏览器缩放，滚动条滚动
-            });
+            });*/
             myScroll = new IScroll('#wrapper', {
                 scrollbars: true,
                 mouseWheel: true,
@@ -26,7 +26,7 @@
             var $footerUp = $("#footerUp");
             var $header = $("#header");
             $header.css("background","rgba(0,143,58,.8)");
-            touch.on($footerUp,'tap',function (e){
+            $footerUp.tap(function(e){
                 var $target = $(e.target).index();
                 if($target === 0){
                     window.location = "../index.html";
